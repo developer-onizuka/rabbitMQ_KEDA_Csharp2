@@ -2,9 +2,11 @@
 
 # 1. Send Data to Temporary Queue by dotnet app
 ```
-# export RABBITMQ_IPADDR="192.168.33.220"
-# export RABBITMQ_DLX="dlx.employee-queue-tmp"
-# export RABBITMQ_MESSAGECOUNT="500"
+export RABBITMQ_IPADDR="192.168.33.220"
+export RABBITMQ_DLX="dlx.employee-queue-tmp"
+export RABBITMQ_MESSAGECOUNT="500"
+```
+```
 # cd sendImage-to-rabbitmqDLX2/
 # dotnet run
  [x] Sent 1

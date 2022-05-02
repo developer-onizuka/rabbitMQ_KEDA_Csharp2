@@ -17,7 +17,7 @@
  Press [enter] to exit.
 ```
 
-# 2. Face Detection by the function of python Library
+# 2. Detect face by the function of python Library on KEDA
 This function is
 - to dequeue the EmployeeEntity record including image from the "employee-queue-temp".
 - to process its image and make a new face's image by python AI Library.
@@ -42,7 +42,7 @@ EOF
 # func kubernetes deploy --name rabbitmq-to-facedetectedmq --registry 192.168.1.5:5000 --max-replicas 16 --polling-interval 5 --cooldown-period 60
 ```
 
-# 3. Insert the record to MongoDB
+# 3. Insert the record to MongoDB by the function on KEDA
 This function is
 - to dequeue the EmployeeEntity record including image and face's image from the "employee-queue".
 - to insert it to MongoDB.

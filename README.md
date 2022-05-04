@@ -1,5 +1,9 @@
 # rabbitMQ_KEDA_Csharp2
 
+<img src="https://github.com/developer-onizuka/Diagrams/blob/main/rabbitMQ_KEDA_Csharp2/rabbitMQ.drawio.png" width="720">
+<br>
+
+
 # 1. Send Data to Temporary Queue by dotnet app
 ```
 export RABBITMQ_IPADDR="192.168.33.220"

@@ -19,7 +19,17 @@ namespace rabbitmq_to_hybridCloud
 	{
             IMongoDatabase db = client.GetDatabase("mydb");
             collection = db.GetCollection<EmployeeEntity>("Employee");
-            collection.InsertOne(entity); 
+
+	    var filter = Builders<EmployeeEntity>.Filter.Eq("EmployeeID", entity.EmployeeID);
+	    var updateDef = Builders<EmployeeEntity>.Update.Set("FirstName", entity.FirstName)
+	                                                   .Set("LastName", entity.LastName)
+	                                                   .Set("Image", entity.Image)
+	                                                   .Set("Face", entity.Face);
+	    //var updateOption = new UpdateOptions { IsUpsert = true };
+	    //collection.UpdateOne(filter, updateDef, updateOption);
+	    collection.UpdateOne(filter, updateDef, new UpdateOptions { IsUpsert = true });
+
+            //collection.InsertOne(entity); 
             // {"EmployeeID":1,"FirstName":"Yukichi","LastName":"Fukuzawa"}
             // {"EmployeeID":2,"FirstName":"Shoin","LastName":"Yoshida"}
 	}

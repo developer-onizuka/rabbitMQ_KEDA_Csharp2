@@ -6,7 +6,7 @@
 
 # 1. Send Data to Temporary Queue by dotnet app
 ```
-export RABBITMQ_IPADDR="192.168.33.220"
+export RABBITMQ_IPADDR="192.168.33.221"
 export RABBITMQ_DLX="dlx.employee-queue-tmp"
 export RABBITMQ_MESSAGECOUNT="500"
 ```

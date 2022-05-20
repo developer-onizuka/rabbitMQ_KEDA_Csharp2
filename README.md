@@ -3,6 +3,8 @@
 <img src="https://github.com/developer-onizuka/Diagrams/blob/main/rabbitMQ_KEDA_Csharp2/rabbitMQ.drawio.png" width="720">
 <br>
 
+<img src="https://github.com/developer-onizuka/rabbitMQ_KEDA_Csharp2/blob/main/faceDetection.png" width="480">
+<br>
 
 # 1. Send Data to Temporary Queue by dotnet app
 ```

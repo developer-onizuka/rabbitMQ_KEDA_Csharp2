@@ -16,6 +16,6 @@ ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
 
 COPY --from=installer-env ["/home/site/wwwroot", "/home/site/wwwroot"]
 
-#RUN echo "deb http://dk.archive.ubuntu.com/ubuntu/ bionic main universe" >> /etc/apt/sources.list && apt-get update && apt-get -y install gcc-6 g++-6
-RUN apt-get update && DEBIAN_FRONTEND='noninteractive' apt-get install -y python3 python3-distutils python3-setuptools python3-pip python3-opencv
+RUN apt-get update && DEBIAN_FRONTEND='noninteractive' apt-get install -y python3 python3-distutils python3-setuptools python3-pip python3-opencv cmake libopenblas-dev liblapack-dev libjpeg-dev
+RUN pip3 install face_recognition
 COPY faceDetect.py /home/site/wwwroot

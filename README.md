@@ -31,7 +31,7 @@ This function is
 - to process its image and make a new face's image by python AI Library.
 - to enqueue the EmployeeEntity record including image and face's image back to the employee-queue.
 ```
-# cd rabbitmq-to-faceDetectedMQ
+# cd rabbitmq-to-faceDetectedMQ2
 # cat <<EOF > local.settings.json 
 {
     "IsEncrypted": false,
@@ -47,7 +47,7 @@ This function is
 }
 EOF
 
-# func kubernetes deploy --name rabbitmq-to-facedetectedmq --registry 192.168.1.5:5000 --max-replicas 16 --polling-interval 5 --cooldown-period 60
+# func kubernetes deploy --name rabbitmq-to-facedetectedmq2 --registry 192.168.1.5:5000 --max-replicas 8 --polling-interval 5 --cooldown-period 60
 ```
 
 # 3. Insert the record to MongoDB by the function on KEDA

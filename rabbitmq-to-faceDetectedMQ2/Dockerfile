@@ -17,5 +17,5 @@ ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
 COPY --from=installer-env ["/home/site/wwwroot", "/home/site/wwwroot"]
 
 RUN apt-get update && DEBIAN_FRONTEND='noninteractive' apt-get install -y python3 python3-distutils python3-setuptools python3-pip python3-opencv cmake libopenblas-dev liblapack-dev libjpeg-dev
-RUN pip3 install face_recognition
+RUN pip3 install face_recognition requests
 COPY faceDetect.py /home/site/wwwroot

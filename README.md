@@ -31,6 +31,13 @@ This function is
 - to process its image and make a new face's image by python AI Library.
 - to enqueue the EmployeeEntity record including image and face's image back to the employee-queue.
 ```
+
+# git clone https://github.com/developer-onizuka/faceRecognizerAPI
+# cd faceRecognizerAPI
+# kubectl apply -f faceRecognizerAPI.yaml
+# cd -
+
+# git clone https://github.com/developer-onizuka/rabbitMQ_KEDA_Csharp2
 # cd rabbitmq-to-faceDetectedMQ2
 # cat <<EOF > local.settings.json 
 {

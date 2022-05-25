@@ -28,7 +28,7 @@ export RABBITMQ_MESSAGECOUNT="500"
 # 2. Detect face by the function of python Library on KEDA
 This function is
 - to dequeue the EmployeeEntity record including image from the "employee-queue-temp".
-- to process its image and make a new face's image by python AI Library.(faceRecognizerAPI)
+- to process its image and make a new face's image by python AI Library.([faceRecognizerAPI](https://github.com/developer-onizuka/faceRecognizerAPI))
 - to enqueue the EmployeeEntity record including image and face's image back to the employee-queue.
 ```
 
